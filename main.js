@@ -27,7 +27,7 @@ function findHeavyPokemon(data) {
 }
 
 function orderByWeight(data) {
-  dataToSort = data;
+  dataToSort = [...data];
   sortingRounds = data.length;
   sortedData = [];
   for (let i = 0; i < sortingRounds; i++) {
@@ -65,5 +65,5 @@ function getEvolutions(data, pokemon) {
 let dataList = makeObjects(pokemonData);
 // countPokemon(dataList);
 // findHeavyPokemon(dataList);
-// orderByWeight(dataList);
+orderByWeight(dataList);
 getEvolutions(dataList, "Bulbasaur");
